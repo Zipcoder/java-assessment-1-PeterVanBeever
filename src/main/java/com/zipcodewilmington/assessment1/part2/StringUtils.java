@@ -68,7 +68,16 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        StringBuilder outcome = new StringBuilder(str);
+        outcome.deleteCharAt(index);
+
+//        for (int i = 0; i <str.length(); i++){
+//            if (str.charAt(i)!=index){
+//                outcome.append(str.charAt(i+1));
+//            }
+//        }
+        return outcome.toString();
+        //return null;
     }
 
 }
