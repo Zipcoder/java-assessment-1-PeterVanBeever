@@ -79,25 +79,39 @@ public class ArrayUtils {
                 maxCount = count;
             }
         }
-
         return mostFrequent;
-
-
-
-
-
         //return null;
     }
-
-
     /**
      * @param objectArray an array of any type of Object
      * @return the least frequently occurring object in the array
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
-    public static Object getLeastCommon(Object[] objectArray) {
-
-        return null;
+    public static Object getLeastCommon(Integer[] objectArray) {
+        int n = objectArray.length;
+        boolean visited[] = new boolean[n];
+        int maxFreq = 0, minFreq = n;
+        int maxElement = 0, minElement = 0;
+        for (int i = 0; i < n; i++) {
+            if (visited[i] == true)
+                continue;
+            int count = 1;
+            for (int j = i + 1; j < n; j++) {
+                if (objectArray[i] == objectArray[j]) {
+                    visited[j] = true;
+                    count++;
+                }
+            }
+            if (count > maxFreq) {
+                maxElement = objectArray[i];
+                maxFreq = count;
+            }
+            if (count < minFreq) {
+                minElement = objectArray[i];
+                minFreq = count;
+            }
+        }
+        return minElement;
     }
 
     /**
