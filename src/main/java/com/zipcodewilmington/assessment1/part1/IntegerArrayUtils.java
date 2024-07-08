@@ -28,7 +28,12 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-        return null;
+        int product =1;
+        for (int i : intArray){
+            product *=i;
+        }
+        return product;
+        //return null;
     }
 
     /**
