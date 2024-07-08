@@ -13,11 +13,14 @@ public class IntegerArrayUtils {
      */
     public static Integer getSum(Integer[] intArray) {
         int sum = 0;
-
+        for (int num : intArray){
+            sum += num;
+        }
+        return sum;
         //Integer sum = intArray.stream();
         //int sum = IntStream.of(intArray).sum();
         //return Arrays.stream(intArray).sum();
-        return null;
+        //return null;
     }
 
     /**
