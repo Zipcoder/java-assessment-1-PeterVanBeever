@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -31,8 +33,20 @@ public class ArrayUtils {
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
             //Object[] newArray = ArrayUtils.remove
-
-        //return outcome;
+//        int i, j;
+//        for (i = 0, j =0; j < objectArray.length; j++) {
+//            //check if jth object is not equal to objectToRemove
+//            if (!objectArray[j].equals(objectToRemove)) {
+//                objectArray[i++] = objectArray[j];
+//            }
+//            //copy array
+//            objectArray = Arrays.copyOf(objectArray, i);
+//            //return outcome;
+//            for (int index = 0; index < objectArray.length; index++) {
+//            String finalArray =  objectArray[index];
+//            }
+//        }
+//        return objectArray;
         return null;
 
 
@@ -44,7 +58,23 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the most frequently occuring object in the array
      */
     public static Object getMostCommon(Object[] objectArray) {
-        return null;
+       int len = objectArray.length-1;
+       int maxcount = 0;
+       int mostFreqElement = 0;
+       for (int i = 0; i < len; i++){
+           int count = 0;
+           for (int j = 0; j < len; j++){
+               if (objectArray[i] == objectArray) {
+                   count++;
+               }
+           }
+           if (count > maxcount) {
+               maxcount = count;
+               mostFreqElement = (int) objectArray[i];
+           }
+       }
+        return mostFreqElement;
+        //return null;
     }
 
 
