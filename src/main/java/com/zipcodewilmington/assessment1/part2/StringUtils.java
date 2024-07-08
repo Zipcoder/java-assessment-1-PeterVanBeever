@@ -39,7 +39,20 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
+        String[] newString = sentence.split(" ",2);
+        String firstword = newString[0];
+        String theRest = newString[1];
+        String outcome = new StringBuilder(firstword).reverse().toString();
+        //String finalSting =  outcome + theRest.toString();
+        //return finalSting;
+        return outcome;
 
+
+//        if (sentence.length() <= 1){
+//            return sentence.substring(1);}
+//        else {
+//            return reverseFirstWord(sentence);
+//        }
 
         //String[] arraySentence = sentence.split(" ",2);
         //String firstWord = outcome[0];
@@ -48,7 +61,7 @@ public class StringUtils {
 //        String firstWordRev = new StringBuilder(firstWord).reverse().toString();
 //        String result = firstWordRev + outcome[1];
         //String outcome = new StringBuilder(str).reverse().toString();
-        return null;
+        //return null;
     }
 
     /**
