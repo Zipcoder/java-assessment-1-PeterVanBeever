@@ -38,7 +38,7 @@ public class Dog extends Pet {
      * @return bark as a string
      */
     public String speak() {
-        return "Meow";
+        return "Bark";
 
         //return null;
     }
