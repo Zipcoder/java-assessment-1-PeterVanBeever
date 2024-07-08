@@ -1,5 +1,5 @@
 package com.zipcodewilmington.assessment1.part4;
-
+import java.util.Arrays;
 public class Jumper {
 
     /*
@@ -9,8 +9,14 @@ public class Jumper {
         //jumpheight j
         //flagheight k
 
+        int fullJumps = k / j;
 
-        return -1;
+        int remainingHeight = k % j;
+
+        return fullJumps + remainingHeight;
+
+
+        //return -1;
 
     }
     // k

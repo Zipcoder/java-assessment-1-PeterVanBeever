@@ -44,7 +44,6 @@ public abstract class Pet implements Animal {
      * @return age of this pet
      */
     public Integer getAge() {
-
         return null;
     }
 
