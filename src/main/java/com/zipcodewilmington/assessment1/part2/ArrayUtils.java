@@ -1,6 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
 import java.util.Arrays;
+import java.util.stream.Stream;
 
 /**
  * Created by leon on 2/16/18.
@@ -31,23 +32,28 @@ public class ArrayUtils {
      * @return an array with identical content excluding the specified `objectToRemove`
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
-    public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-            //Object[] newArray = ArrayUtils.remove
-//        int i, j;
-//        for (i = 0, j =0; j < objectArray.length; j++) {
-//            //check if jth object is not equal to objectToRemove
-//            if (!objectArray[j].equals(objectToRemove)) {
-//                objectArray[i++] = objectArray[j];
-//            }
-//            //copy array
-//            objectArray = Arrays.copyOf(objectArray, i);
-//            //return outcome;
-//            for (int index = 0; index < objectArray.length; index++) {
-//            String finalArray =  objectArray[index];
-//            }
-//        }
-//        return objectArray;
-        return null;
+    public static Integer[] removeValue(Integer[] objectArray, Integer objectToRemove) {
+        int x = 0;
+        for (int i =0; i <objectArray.length; i++){
+            //check if element i matches value
+            //use ! to reverse the locic equals
+            if (!objectArray[i].equals(objectToRemove)) {
+                //if no match to remove, go to next array element
+                x++;
+            }
+        }
+        //create empty fixed array
+        Integer[] fixedArray = new Integer[x];
+        int y = 0;
+        //build array with a loop
+        for (int i=0; i<objectArray.length;i++){
+            if (!objectArray[i].equals(objectToRemove)){
+                //as long as no match to remove
+                fixedArray[y++] = objectArray[i];
+            }
+        }
+        return fixedArray;
+        //return null;
 
 
     }
@@ -84,6 +90,7 @@ public class ArrayUtils {
      * given an array of objects, named `objectArray` return the least frequently occuring object in the array
      */
     public static Object getLeastCommon(Object[] objectArray) {
+
         return null;
     }
 
@@ -94,6 +101,8 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+
+
         return null;
     }
 }
