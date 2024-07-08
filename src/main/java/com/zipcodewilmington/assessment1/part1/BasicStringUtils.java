@@ -33,7 +33,6 @@ public class BasicStringUtils {
         String step1reverse = reverse(str);
         String step2camel = camelCase(step1reverse);
         return step2camel;
-
         //return null;
     }
 
@@ -43,7 +42,13 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        //str = str.substring(1,str.length()-1);
+        StringBuilder sb = new StringBuilder(str);
+        sb.deleteCharAt(str.length()-1);
+        sb.deleteCharAt(0);
+        return sb.toString();
+        // String outcome = str.replace(str.charAt(0),'');
+       // return null;
     }
 
     /**
