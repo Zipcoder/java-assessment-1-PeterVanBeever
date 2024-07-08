@@ -121,8 +121,15 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+        int x = objectArray.length;
+        int y = objectArrayToAdd.length;
+        Integer[] mergeArray = new Integer[x + y];
 
+        System.arraycopy(objectArray, 0, mergeArray, 0, x);
+        System.arraycopy(objectArrayToAdd, 0, mergeArray, x, y);
 
-        return null;
+        System.out.println(Arrays.toString(mergeArray));
+        return mergeArray;
+        //return null;
     }
 }
