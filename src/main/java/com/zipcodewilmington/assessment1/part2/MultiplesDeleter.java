@@ -25,7 +25,6 @@ public class MultiplesDeleter {
                outcome[index++] = num;
            }
        }
-
         return outcome;
     }
 
@@ -35,7 +34,21 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int count = 0;
+        for (Integer num : ints) {
+            if (num %2 == 0) {
+                count++;
+            }
+        }
+        Integer[] outcome = new Integer[count];
+        int index = 0;
+        for (Integer num : ints) {
+            if (num % 2 ==0) {
+                outcome[index++] = num;
+            }
+        }
+        return outcome;
+        //return null;
     }
 
     /**
@@ -44,7 +57,24 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int count = 0;
+        //for each...
+        for (Integer num : ints){
+            //divisible by 3
+           if (num %3!=0){
+               count++;
+           }
+        }
+        Integer[] outcome = new Integer[count];
+        int index =0;
+        // for each in array ints
+        for (Integer num : ints){
+            if (num %3 !=0){
+                outcome[index++]=num;
+            }
+        }
+        return outcome;
+        //return null;
     }
 
     /**
