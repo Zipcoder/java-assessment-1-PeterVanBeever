@@ -6,6 +6,13 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
+        //jumpheight
+
         return -1;
     }
+    // k
+    // j
+
+
+
 }
