@@ -13,6 +13,7 @@ public class BasicStringUtils {
         //String outcome = new StringBuilder(str).setCharAt(0, );
         String outcome = Character.toUpperCase(str.charAt(0)) + str.substring(1);
         return outcome;
+        //return null
     }
 
     /**
@@ -20,15 +21,20 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        String outcome = new StringBuilder(str).reverse().toString();
+        return outcome;
+        //return null;
     }
-
     /**
      * @param str string input from client
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        String step1reverse = reverse(str);
+        String step2camel = camelCase(step1reverse);
+        return step2camel;
+
+        //return null;
     }
 
 
