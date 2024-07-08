@@ -9,7 +9,11 @@ public class BasicStringUtils {
      * @return string with identical content, and the first character capitalized
      */
     public static String camelCase(String str) {
-        return null;
+        //char firstChar = str.toUpperCase(str.charAt(0);
+        //String outcome = new StringBuilder(str).setCharAt(0, );
+        String outcome = Character.toUpperCase(str.charAt(0)) + str.substring(1);
+        return outcome;
+        //return null
     }
 
     /**
@@ -17,15 +21,19 @@ public class BasicStringUtils {
      * @return string with identical contents, in the reverse order
      */
     public static String reverse(String str) {
-        return null;
+        String outcome = new StringBuilder(str).reverse().toString();
+        return outcome;
+        //return null;
     }
-
     /**
      * @param str string input from client
      * @return string with identical contents, in reverse order, with first character capitalized
      */
     public static String reverseThenCamelCase(String str) {
-        return null;
+        String step1reverse = reverse(str);
+        String step2camel = camelCase(step1reverse);
+        return step2camel;
+        //return null;
     }
 
 
@@ -34,7 +42,13 @@ public class BasicStringUtils {
      * @return string with identical contents excluding first and last character
      */
     public static String removeFirstAndLastCharacter(String str) {
-        return null;
+        //str = str.substring(1,str.length()-1);
+        StringBuilder sb = new StringBuilder(str);
+        sb.deleteCharAt(str.length()-1);
+        sb.deleteCharAt(0);
+        return sb.toString();
+        // String outcome = str.replace(str.charAt(0),'');
+       // return null;
     }
 
     /**
@@ -42,6 +56,17 @@ public class BasicStringUtils {
      * @return string with identical characters, each with opposite casing
      */
     public static String invertCasing(String str) {
-        return null;
+        char[] chars = str.toCharArray();
+        //loop through the char to reverse each
+        for (int i = 0; i < chars.length; i++) {
+            char c = chars[i];
+            if (Character.isUpperCase(c)) {
+                chars[i] = Character.toLowerCase(c);
+            } else if (Character.isLowerCase(c)) {
+                chars[i] = Character.toUpperCase(c);
+            }
+        }
+        return new String(chars);
+        //return null;
     }
 }

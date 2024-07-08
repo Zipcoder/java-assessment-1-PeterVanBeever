@@ -11,7 +11,13 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return an array of strings, each element representative of a respective word in the sentence
      */
     public static String[] getWords(String sentence) {
-        return null;
+//            char[] wordArray = sentence.toCharArray();
+        String[] words = sentence.split("\\W+");
+//        for (int i = 0; i < words.length; i++){
+//            words[i] = words[i].
+//        }
+        return words;
+        //return null;
     }
 
 
@@ -21,7 +27,10 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word of the sentence
      */
     public static String getFirstWord(String sentence) {
-        return null;
+        String[] outcome = sentence.split(" ",2);
+        String firstWord = outcome[0];
+        return firstWord;
+        //return null;
     }
 
     /**
@@ -30,7 +39,11 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order
      */
     public static String reverseFirstWord(String sentence) {
-        return null;
+        String[] newString = sentence.split(" ",2);
+        String firstword = newString[0];
+        String outcome = new StringBuilder(firstword).reverse().toString();
+        return outcome;
+        //return null;
     }
 
     /**
@@ -39,7 +52,12 @@ public class StringUtils {
      * given a string containing words delimited by spaces, representative of a sentence, return the first word with identical contents in reverse order with the first character capitalized
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
-        return null;
+        String[] newString = sentence.split(" ",2);
+        String firstword = newString[0];
+        String outcome = new StringBuilder(firstword).reverse().toString();
+        String finalOutcome = String.valueOf(Character.toUpperCase(outcome.charAt(0)))+ outcome.substring(1);
+        return finalOutcome;
+        //return null;
     }
 
 
@@ -50,7 +68,16 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
-        return null;
+        StringBuilder outcome = new StringBuilder(str);
+        outcome.deleteCharAt(index);
+
+//        for (int i = 0; i <str.length(); i++){
+//            if (str.charAt(i)!=index){
+//                outcome.append(str.charAt(i+1));
+//            }
+//        }
+        return outcome.toString();
+        //return null;
     }
 
 }

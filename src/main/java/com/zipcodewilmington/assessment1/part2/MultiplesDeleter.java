@@ -1,5 +1,7 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -10,7 +12,20 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+       int count =0;
+       for (Integer num : ints){
+           if (num % 2 !=0){
+               count++;
+           }
+       }
+       Integer[] outcome = new Integer[count];
+       int index = 0;
+       for (Integer num : ints){
+           if (num %2!=0){
+               outcome[index++] = num;
+           }
+       }
+        return outcome;
     }
 
     /**
@@ -19,7 +34,21 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        int count = 0;
+        for (Integer num : ints) {
+            if (num %2 == 0) {
+                count++;
+            }
+        }
+        Integer[] outcome = new Integer[count];
+        int index = 0;
+        for (Integer num : ints) {
+            if (num % 2 ==0) {
+                outcome[index++] = num;
+            }
+        }
+        return outcome;
+        //return null;
     }
 
     /**
@@ -28,7 +57,24 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        int count = 0;
+        //for each...
+        for (Integer num : ints){
+            //divisible by 3
+           if (num %3!=0){
+               count++;
+           }
+        }
+        Integer[] outcome = new Integer[count];
+        int index =0;
+        // for each in array ints
+        for (Integer num : ints){
+            if (num %3 !=0){
+                outcome[index++]=num;
+            }
+        }
+        return outcome;
+        //return null;
     }
 
     /**
@@ -38,6 +84,23 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        int count = 0;
+        //for each...
+        for (Integer num : ints){
+            //divisible by 3
+            if (num %multiple!=0){
+                count++;
+            }
+        }
+        Integer[] outcome = new Integer[count];
+        int index =0;
+        // for each in array ints
+        for (Integer num : ints){
+            if (num %multiple !=0){
+                outcome[index++]=num;
+            }
+        }
+        return outcome;
+        //return null;
     }
 }

@@ -29,12 +29,14 @@ public abstract class Pet implements Animal {
      * @param age age of this pet
      */
     public Pet(String name, int age) {
+
     }
 
     /**
      * @return name of this pet
      */
     public String getName() {
+
         return null;
     }
 
