@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part1;
 
+import java.util.Arrays;
+import java.util.stream.IntStream;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -9,6 +12,11 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
+        int sum = 0;
+
+        //Integer sum = intArray.stream();
+        //int sum = IntStream.of(intArray).sum();
+        //return Arrays.stream(intArray).sum();
         return null;
     }
 
